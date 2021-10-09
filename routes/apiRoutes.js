@@ -5,7 +5,7 @@ const path = require('path');
 // the place where the notes are going to go
 const fs = require('fs') // provides a lot of very useful functionality to access and interact with the file system node.js.dv
 const notes = require('../db/db.json');
-const createNewNote = require('../lib/notes.js')
+const { createNewNote, deleteNote } = require('../lib/notes.js')
 
 // The Get Request - This is from Zookeeper to help with this method
 router.get('/notes', (req, res) => {
@@ -24,9 +24,14 @@ router.post('/notes', (req, res) => {
 });
 
 // Delete Request and have to work on it 
-// router.delete('/notes/:id', (req, res) => {
-// })
-
+router.delete('/notes/:id', (req, res) => { // This is like the above things that you need 
+    req.params.id = notes.length.toString();
+  if (!req.params.id) {
+  } else {
+    const note = deleteNote(req.body, notes);
+    res.json(note);
+  }
+});
 
 //Contact the database
 module.exports = router;
