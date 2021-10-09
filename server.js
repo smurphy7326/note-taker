@@ -11,10 +11,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
-// API use Routes
-app.use('./api', apiRoutes)
-app.use('/', htmlRoutes)
 
+// API use Routes
+app.use('/api', apiRoutes)
+app.use('/', htmlRoutes)
 
 // Listen section
 app.listen(PORT, () => {
