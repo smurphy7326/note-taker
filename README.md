@@ -5,8 +5,8 @@
 This application uses Javascript, Node.js, Express.js, uniqid.js, HTML and CSS to make a note taker app! The app creates notes. This app allows you to change notes. This app also allows you to delete the notes that you have created! When the notes are created, they are kept on the side of the app, to stay there for later use. Don't you just hate when you forget something at the store and you write it down on a piece of paper, only to lose it? With this app that can all change. 
 
 To use this Note Taker application please visit: 
-- Note Taker App(https://aqueous-wave-98237.herokuapp.com/)
-- Github Repo(https://github.com/smurphy7326/note-taker)
+- [Note Taker App](https://aqueous-wave-98237.herokuapp.com/)
+- [Github Repo](https://github.com/smurphy7326/note-taker)
 
 ![image](images/opening-page-heroku.jpg)
 ![image](images/notes-section.jpg)
@@ -25,7 +25,7 @@ To use this Note Taker application please visit:
 
 To install this application:
 
-1. Make sure node.js is installed on your computer. (https://node.js.org/en/download/)
+1. Make sure node.js is installed on your computer. (https://nodejs.org/en/)
 
 2. This projects Github repo, click on the green code button
 
