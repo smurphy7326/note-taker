@@ -25,13 +25,9 @@ router.post('/notes', (req, res) => {
 
 // Delete Request and have to work on it 
 router.delete('/notes/:id', (req, res) => { // This is like the above things that you need 
-    req.params.id = notes.length.toString();
-  if (!req.params.id) {
-  } else {
-    const note = deleteNote(req.body, notes);
-    res.json(note);
-  }
-});
+    deleteNote(notes, req.params.id); // find the index matching the param id
+    res.json(notes);
+})
 
 //Contact the database
 module.exports = router;
