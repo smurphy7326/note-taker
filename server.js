@@ -1,4 +1,4 @@
-const apiRoutes = ('./routes/apiRoutes.js'); 
+const apiRoutes = require('./routes/apiRoutes.js'); 
 const htmlRoutes = require('./routes/htmlRoutes');
 
 const express = require('express'); // calls the express npm to allow what needs to be done to be done

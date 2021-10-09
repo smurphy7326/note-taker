@@ -4,7 +4,8 @@ const path = require('path');
 
 // the place where the notes are going to go
 const fs = require('fs') // provides a lot of very useful functionality to access and interact with the file system node.js.dv
-const newData = require('../lib/newData');
+const notes = require('../Develop/db/db.json');
+const { createNewNote } = require('../lib/newData')
 
 // The Get Request - This is from Zookeeper to help with this method
 router.get('/notes', (req, res) => {
@@ -17,7 +18,7 @@ router.post('/notes', (req, res) => {
   if (!validateNote(req.body)) {
     res.status(400).send("The note is not properly formatted.");
   } else {
-    const note = createNewAnimal(req.body, animals);
+    const note = createNewNote(req.body, notes);
     res.json(note);
   }
 });
@@ -28,3 +29,4 @@ router.post('/notes', (req, res) => {
 
 
 //Contact the database
+module.exports = router;
